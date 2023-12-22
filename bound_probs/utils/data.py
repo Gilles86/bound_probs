@@ -13,6 +13,7 @@ def get_dataset(ds='ds2'):
 
         df['p_bin'] = pd.cut(df['p'], bins=np.arange(0, 1.05, .05), labels=np.arange(0.025, 1, 0.05))
         df['p_bin2'] = pd.cut(df['p'], bins=np.arange(0, 1.05, .1), labels=np.arange(0.05, 1.05, 0.1))
+        df['p_bin3'] = pd.cut(df['p'], bins=np.arange(0, 1.1, .15), labels=np.arange(0.1, 1.1, 0.15))
         df['bias'] = df['certaintyEquivalent'] / 43. - df['p']
 
     else:
